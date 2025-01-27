@@ -175,3 +175,24 @@ footer {
     object-fit: cover;
     margin: 20px auto;    
 }
+
+.small-img{
+    width: 20%;
+    height: 20%;
+}
+
+@media (max-width: 800px) {
+
+    .vertictop {
+        height: auto;
+    }
+
+    .horiz{
+        height: auto;
+    }
+
+    .gentxt{
+        font-size: 18px;
+    }
+    
+}
