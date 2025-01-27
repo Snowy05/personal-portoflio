@@ -97,11 +97,11 @@ li{
 }
 
 .horiz{
-    height: 200px;
+    height: auto;
     margin-bottom: 20px;
 }
 .vertictop{
-    height: 400px;
+    height: auto;
 
 }
 .vertic{
@@ -183,16 +183,8 @@ img.small-img{
 
 @media (max-width: 800px) {
 
-    .vertictop {
-        height: auto;
-    }
-
-    .horiz{
-        height: auto;
-    }
-
     .gentxt{
-        font-size: 18px;
+        font-size: 50px;
     }
     
 }
