@@ -98,14 +98,7 @@ li{
     margin-bottom: 20px;
 }
 
-.cont-dividerou{
-    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
-}
-.cont-dividerin{
-    display: flex; 
-    flex-direction: column; 
-    gap: 20px; grid-column: 2 / 3
-}
+
 
 .horiz{
     height: auto;
@@ -134,6 +127,35 @@ li{
     border: 2px;
     border-style: solid;
     border-color: black;
+}
+/*Main Cards */
+.card {
+    max-width: 750px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.card-header {
+    padding: 20px;
+    background: #000000;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+.card-content {
+    padding: 20px;
+    display: none;
+}
+.card.open .card-content {
+    display: block;
+}
+.card:hover {
+    transform: translateY(-10px);
 }
 
 
@@ -192,11 +214,79 @@ img.small-img{
     height: 20%;
 }
 
+/*Contact Card CSS */
+.contact-card {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid black;
+    border-radius: 15px;
+    z-index: 1000;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: transform 0.8s;
+}
+
+.contact-card.show {
+    display: block;
+    animation: slide-in 0.5s ease-out;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translate(-50%, -100%);
+    }
+    to {
+        transform: translate(-50%, -50%);
+    }
+}
+
+.contact-card-content {
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+.contact-card h2 {
+    margin-top: 0;
+    font-size: 24px;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-card p {
+    margin: 10px 0;
+}
+
+
 /*RESPONSIVE DESIGN*/
 @media (max-width: 1200px) {
     .gentxt {
         padding-left: 10%;
         padding-right: 10%;
+        font-size: 15px;
     }
 
     .cont-dividerou, .cont-dividerin {
@@ -211,9 +301,15 @@ img.small-img{
     header, footer, .gentxt, .inlist {
         text-align: center;
     }
-}
 
-@media (max-width: 800px) {
+    .vertictop, footer.fco{
+        font-size: 25px;
+    }
+
+    .ouc{
+        display: table;
+        justify-content: flex-start;
+    }
     .gentxt {
         padding-left: 5%;
         padding-right: 5%;
@@ -225,40 +321,23 @@ img.small-img{
     }
 
     .inc {
-        width: 100%;
-        margin: 10px auto;
+        width: 90%;
     }
 
     .backcol {
         display: none;
     }
-}
+    .contact-card{
+        font-size: 20px;
+    }
 
- .card {
-            max-width: 750px;
-            margin: 20px auto;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        .card-header {
-            padding: 20px;
-            background: #000000;
-            color: #fff;
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-        }
-        .card-content {
-            padding: 20px;
-            display: none;
-        }
-        .card.open .card-content {
-            display: block;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-        }
+    .namesty{
+        font-size: 45px;
+    }
+
+    .namesty2{
+        font-size: 20px;
+    }
+
+
+}
