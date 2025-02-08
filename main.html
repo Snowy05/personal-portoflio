@@ -172,11 +172,26 @@
             </div>
         </div>
         <img src="Pictures/BigPortPicTop.png" alt="divider panorama picture" class="divpic">
+    
+    <div id="contact-card" class="contact-card">
+        <div class="contact-card-content">
+            <span class="close-btn" onclick="toggleContactCard()">&times;</span>
+            <h2>Sandor Kovacs</h2>
+            <p>Email: sandor.kovacs.9503@gmail.com</p>
+            <p>Phone: +44 7887052743</p>
+            <p>Location: Sheffield, UK</p>
+        </div>
+    </div>
     </main>
     <script>
         function toggleCard(card) {
             card.classList.toggle('open');
         }
+       function toggleContactCard() {
+            const contactCard = document.getElementById('contact-card');
+            contactCard.classList.toggle('show');
+        }
+    </script>
     </script>
     <footer class="fco">
         <div class="footer-info"> 
@@ -184,7 +199,7 @@
             <p>Software Engineer | Front-End</p> 
             <p>Location: Sheffield, UK</p> </div> 
             <div class="footer-nav"> 
-                <a href="#contact">Contact</a> </div> 
+                <a onclick="toggleContactCard()">Contact</a> </div> 
                 <div class="footer-social"> <a href="https://www.linkedin.com/in/sandor-kovacs-a9a826349/" target="_blank">LinkedIn</a> 
                     <a href="https://github.com/Snowy05" target="_blank">GitHub</a> 
                 </div>
