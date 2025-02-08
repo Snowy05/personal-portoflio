@@ -3,7 +3,18 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    color: #fffff7;
+    color: #000000;
+}
+
+.gentxt{
+    color: white;
+}
+.gentitl{
+    color: #ffffff;
+}
+
+.title-holder{
+    color: #000000;
 }
 
 .backcol {
@@ -181,10 +192,73 @@ img.small-img{
     height: 20%;
 }
 
-@media (max-width: 800px) {
-
-    .gentxt{
-        font-size: 50px;
+/*RESPONSIVE DESIGN*/
+@media (max-width: 1200px) {
+    .gentxt {
+        padding-left: 10%;
+        padding-right: 10%;
     }
-    
+
+    .cont-dividerou, .cont-dividerin {
+        grid-template-columns: 1fr;
+    }
+
+    .inc {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    header, footer, .gentxt, .inlist {
+        text-align: center;
+    }
 }
+
+@media (max-width: 800px) {
+    .gentxt {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .inlist {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .inc {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .backcol {
+        display: none;
+    }
+}
+
+ .card {
+            max-width: 750px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .card-header {
+            padding: 20px;
+            background: #000000;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .card-content {
+            padding: 20px;
+            display: none;
+        }
+        .card.open .card-content {
+            display: block;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
